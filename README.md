@@ -1,6 +1,6 @@
 # SimpleConfig
-Simple configuration script (compatible ES2015) for Node.js
-No bells and whistles, just an overwritable json config file with env. variables
+Simple configuration script (compatible ES2015) for Node.js.
+No bells and whistles, just an overwritable json config file with env. variables.
 
 ## Usage
 The configuration script will look for `config.{my_env}.json` files and merge them with `config.json` and specified env. variables.
