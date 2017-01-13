@@ -13,7 +13,7 @@ var ENV_TO_INCLUDE = [ 'API_KEY', 'API_SECRET' ];
 const configuration = createConfiguration('prod', './myconfig', ENV_TO_INCLUDE); 
 ```
 
-### /myconfig/config
+### /myconfig/config.json
 ```json
 {
     "host": "http://localhost.com",
