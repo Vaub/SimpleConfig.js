@@ -37,7 +37,7 @@ function mergeConfigs(files, envVariables = []) {
         .reduce((obj, name) => {
             obj[name] = process.env[name]
             return obj;
-        }, {})
+        }, {});
 
     const withEnvConfig = Object.assign({}, filesConfig, env);
     return Object.freeze(withEnvConfig);
