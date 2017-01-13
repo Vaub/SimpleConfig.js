@@ -1,5 +1,5 @@
 # SimpleConfig
-Simple configuration script (compatible ES2015) for Node.js.
+Simple configuration script (compatible ES2015) for Node.js (or tools using Node.js like Webpack & cie).
 No bells and whistles, just an overwritable json config file with env. variables.
 
 ## Usage
