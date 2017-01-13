@@ -6,6 +6,13 @@ No bells and whistles, just an overwritable json config file with env. variables
 The configuration script will look for `config.{my_env}.json` files and merge them with `config.json` and specified env. variables.
 Variable overwrite order: `config.json < config.{my_env}.json < ENV VARIABLES YOU WANT TO INCLUDE`
 
+### How to include in your .js file
+```javascript
+var createConfiguration = require('./configuration');
+var ENV_TO_INCLUDE = [ 'API_KEY', 'API_SECRET' ];
+const configuration = createConfiguration('prod', './myconfig', ENV_TO_INCLUDE); 
+```
+
 ### /myconfig/config
 ```json
 {
@@ -31,13 +38,6 @@ export API_KEY="envvariablesareagreatplaceforthese"
 export API_SECRET="neverputtheseinconfigfiles"
 ```
 
-### How to include in your .js file
-```javascript
-var createConfiguration = require('./configuration');
-var ENV_TO_INCLUDE = [ 'API_KEY', 'API_SECRET' ];
-const configuration = createConfiguration('dev', './myconfig', ENV_TO_INCLUDE); 
-```
-
 ## Final result (in Js)
 ```javascript
 {
@@ -45,6 +45,5 @@ const configuration = createConfiguration('dev', './myconfig', ENV_TO_INCLUDE);
     port: 443,
     API_KEY: "envvariablesareagreatplaceforthese",
     API_SECRET: "neverputtheseinconfigfiles"
-
 }
 ```
