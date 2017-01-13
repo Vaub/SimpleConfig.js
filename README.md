@@ -10,10 +10,33 @@ var ENV_TO_INCLUDE = [ 'API_KEY', 'API_SECRET' ];
 const configuration = createConfiguration('dev', './myconfig', ENV_TO_INCLUDE); 
 ```
 
-### /myconfig/config.json or config.dev.json
+### /myconfig/config
 ```json
 {
     "host": "http://localhost.com",
-    "port": 8080
+    "port": 8080,
+
+    "never_put_api_keys_or_secret_in_config": "123456789"
+}
+```
+
+## /myconfig/config.prod.json
+```json
+{
+    "host": "https://myawesomewebsite.com",
+    "port": 443
+}
+```
+
+```json
+export never_put_api_keys_or_secret_in_config="thisisnotsecure12345"
+```
+
+## Final result (in Js)
+```javascript
+{
+    host: "https://myawesomewebsite.com",
+    port: 443,
+    never_put_api_keys_or_secret_in_config: "thisisnotsecure12345",
 }
 ```
