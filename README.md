@@ -28,7 +28,7 @@ const configuration = createConfiguration('dev', './myconfig', ENV_TO_INCLUDE);
 }
 ```
 
-```json
+```bash
 export never_put_api_keys_or_secret_in_config="thisisnotsecure12345"
 ```
 
